@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
 
+        <!-- SystemJS config -->
         <script src="node_modules/systemjs/dist/system.js"></script>
         <script>
             SystemJS.config({
@@ -31,8 +32,10 @@
             </div>
             <script>SystemJS.import('modules/input')</script>
 
+            <!-- TodoList module -->
             <div class="panel panel-default">
                 <div class="panel-body">
+                    <h2>Todos</h2>
                     <ul data-todo-list>
                         
                     </ul>
