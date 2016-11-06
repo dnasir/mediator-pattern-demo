@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mediator pattern demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+        <script src="node_modules/systemjs/dist/system.js"></script>
+        <script>
+            SystemJS.config({
+                baseURL: 'build/',
+                defaultJSExtensions: 'js'
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Mediator pattern demo</h1>
+
+            <!-- TodoInput module -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form data-todo-input>
+                        <div class="form-group">
+                            <label for="todoInput">Add task</label>
+                            <input type="text" name="todoInput" value="" class="form-control">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script>SystemJS.import('modules/input')</script>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <ul data-todo-list>
+                        
+                    </ul>
+                </div>
+            </div>
+            <script>SystemJS.import('modules/list')</script>
+        </div>
+    </body>
+</html>
